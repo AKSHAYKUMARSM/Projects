@@ -44,4 +44,27 @@ function login(){
   }
   
 }
-document.querySelector("input[type='button']").addEventListener("click", login);
+document.querySelector("#loginButton").addEventListener("click", login);
+
+const form = document.querySelector("form");
+const loginbutton =document.querySelector("#loginButton");
+
+loginbutton.addEventListener("mouseover", ()=>{
+  form.style.animation='none';
+  void form.offsetWidth;
+  form.style.backgroundColor="white";
+  form.style.color="black";
+  form.style.backgroundImage='url("/src/main/luffy_open.jpg")';
+  form.style.backgroundSize='cover';
+  form.style.animation='bgtrans 1s ease forwards';});
+  
+loginbutton.addEventListener("mouseout",()=>{
+  form.style.animation='none';
+  void form.offsetWidth;
+  form.style.backgroundColor='black';
+  form.style.color='white';
+  form.style.backgroundImage='url("/src/main/luffy.jpg")';
+  form.style.backgroundSize='contain';
+  form.style.animation='bgtrans 1s ease forwards';
+})
+  

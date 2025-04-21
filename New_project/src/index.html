@@ -11,13 +11,14 @@
 <body>
     <header><h1>My App</h1></header>
     <p> Hello Users and Welcom!</p>
-    <form>
-        <label for="name" >User Name:</label>
-        <input type="text" id="name" name="name" required><br>
-        <label for="password" >Password:</label>
-        <input type="password" name="password" id="password" required><br>
-        <input type="button" value="Login">
-        <img src="/src/main/luffy.jpg" alt="image not found">
-    </form>
+    <div id="login-container">
+        <form id="login-form">
+            <label for="name">User Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required><br>
+            <input type="button" value="Login" id="loginButton">
+        </form>
+    </div>
 </body>
 </html>
