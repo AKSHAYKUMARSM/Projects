@@ -88,15 +88,23 @@ input[type="button"] {
 
 input[type="button"]:hover {
     background-color: #b30000;
-    animation: shake 2s ease forwards infinite;
+    animation: shake 5s ease forwards infinite;
 }
 
 @keyframes shake {
-    0% { transform: translateY(0); }
-    25% { transform: translateY(-5px); }
-    50% { transform: rotate(180deg); }
-    75% { transform: rotate(180deg) translateY(100px) rotate(180deg); }
-    100% { transform: translateX(0); }
+    0% {transform:rotate(0deg);}
+    10% {transform:translateY(-50%) rotate(90deg);}
+    20%{transform:translateY(-100%) rotate(180deg)}
+    30%{transform:translateY(-150%) rotate(270deg);}
+    40%{transform:translateY(-200%) rotate(360deg);}
+    50%{transform:translateY(-250%) rotate(450deg);}
+    60%{transform:translateY(-300%) rotate(540deg);}
+    70%{transform:translateY(-350%) rotate(630deg);}
+    80%{transform:translateY(-400%) rotate(720deg);}
+    85%{transform:translate(-50%,-400%) rotate(90deg) ;}
+    90%{translateX(-50%);}
+    95%{transform:translateX(-50%)}
+    100%{transform: translate(0,0);} 
 }
 @keyframes bgtrans{
     0%{opacity: 0;}
