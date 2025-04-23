@@ -36,19 +36,14 @@ form {
     animation: loading 2s ease forwards;
 }
 @keyframes loading{
-    0%{
-        transform: translateY(-100%);
-        opacity: 0;
-    }
+    0%{ transform: translateY(-100%);
+        opacity: 0;}
     20%{transform: scale(0.5);}
     30%{transform: scale(1.2);}
     40%{transform: rotate(45deg);}
     50%{transform: rotate(-45deg);}
     75%{transform:scale(1.5);}   
-    100%{
-        transition: all 2s ease;
-        ;
-    }
+    100%{transition: all 2s ease;}
 }
 
 
@@ -74,7 +69,7 @@ input[type="password"] {
 }
 
 /* Style buttons */
-input[type="button"] {
+#loginButton {
     background-color: #007BFF;
     color: white;
     border: none;
@@ -86,17 +81,33 @@ input[type="button"] {
     right: 5px;
 }
 
-input[type="button"]:hover {
+#loginButton:hover {
     background-color: #b30000;
-    animation: shake 2s ease forwards infinite;
+    animation: buttonHover 2s ease forwards;
 }
 
 @keyframes shake {
-    0% { transform: translateY(0); }
-    25% { transform: translateY(-5px); }
-    50% { transform: rotate(180deg); }
-    75% { transform: rotate(180deg) translateY(100px) rotate(180deg); }
-    100% { transform: translateX(0); }
+    0% {transform:rotate(0deg);}
+    10% {transform:translateY(-50%) rotate(90deg);}
+    20%{transform:translateY(-100%) rotate(180deg)}
+    30%{transform:translateY(-150%) rotate(270deg);}
+    40%{transform:translateY(-200%) rotate(360deg);}
+    50%{transform:translateY(-250%) rotate(450deg);}
+    60%{transform:translateY(-300%) rotate(540deg);}
+    70%{transform:translateY(-350%) rotate(630deg);}
+    80%{transform:translateY(-400%) rotate(720deg);}
+    85%{transform:translate(-50%,-400%) rotate(90deg) ;}
+    90%{transform: translateX(-50%);}
+    95%{transform:translateX(-50%)}
+    100%{transform: translate(0,0);} 
+}
+
+@keyframes buttonHover{
+    0%{transform: scale(1);}
+    25%{transform: scale(1.5);}
+    50%{transoform: rotoate(360deg);border-radius: 100%;}
+    75%{transform: rotate(0deg) scale(1);border-radius: 100%;}
+    100%{background-color: #ff0000d7;color: black;border-radius: 100%;}
 }
 @keyframes bgtrans{
     0%{opacity: 0;}
