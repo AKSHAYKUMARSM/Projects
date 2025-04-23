@@ -37,6 +37,9 @@ function login(){
     return;
   }
   if(name==uname && password==upass){
+    error_msg.innerText="Login successful";
+    sessionStorage.setItem("name",name);
+    sessionStorage.setItem("role","Admin");
     window.location="/src/main/dashboard.html";}
   else{  
     error_msg.innerText="Invalid username or password";
